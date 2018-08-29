@@ -1,6 +1,6 @@
 {
   "name": "dtools.js",
-  "version": "1.0.0-dev",
+  "version": "1.0.1-dev",
   "description": "Free of charge tools for Discord bots",
   "main": "index.js",
   "repository": {
@@ -8,9 +8,9 @@
     "url": "git+https://github.com/MrSheldon/DTools.JS.git"
   },
   "keywords": [
-    "luki",
-    "lib",
-    "luki.js"
+    "dtools",
+    "discordapp",
+    "discord"
   ],
   "author": "MrSheldon <root@mrsheldon.me> (https://mrsheldon.me)",
   "license": "MIT",
