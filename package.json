@@ -1,6 +1,6 @@
 {
   "name": "dtools.js",
-  "version": "1.0.4-dev",
+  "version": "1.0.0-dev",
   "description": "Free of charge tools for Discord bots",
   "main": "index.js",
   "repository": {
