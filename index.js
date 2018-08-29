@@ -25,9 +25,8 @@ class DTOOLS {
         let days = Math.floor(diff / 86400000);
         return days
     }
-    async dblPostStats(id, token, servercount) {
-        if (!id && !token && !servercount) throw new Error('dblPostStats requires 3 argument');
-        if (!id) return console.log("Error: No id specified");
+    async dblPostStats(token, servercount) {
+        if (!token && !servercount) throw new Error('dblPostStats requires 2 argument');
         if (!token) return console.log("Error: No token specified");
         if (!servercount) return console.log("Error: No server count specified");
         const data = {};
@@ -36,12 +35,11 @@ class DTOOLS {
         } else {
             data.server_count = this.client.guilds.size;
         }
-        const response = await this.request('post', `https://discordbots.org/api/bots/${id}/stats`, data, token);
+        const response = await this.request('post', `https://discordbots.org/api/bots/${this.client.user.id}/stats`, data, token);
         return response.body;
     }
-    async bfdPostStats(id, token, servercount) {
-        if (!id && !token && !servercount) throw new Error('bfdPostStats requires 3 argument');
-        if (!id) return console.log("Error: No id specified");
+    async bfdPostStats(token, servercount) {
+        if (!token && !servercount) throw new Error('bfdPostStats requires 2 argument');
         if (!token) return console.log("Error: No token specified");
         if (!servercount) return console.log("Error: No server count specified");
         const data = {};
@@ -50,12 +48,11 @@ class DTOOLS {
         } else {
             data.count = this.client.guilds.size;
         }
-        const response = await this.request('post', `https://botsfordiscord.com/api/v1/bots/${id}`, data, token);
+        const response = await this.request('post', `https://botsfordiscord.com/api/v1/bots/${this.client.user.id}`, data, token);
         return response.body;
     }
-    async bdpPostStats(id, token, servercount) {
-        if (!id && !token && !servercount) throw new Error('bfdPostStats requires 3 argument');
-        if (!id) return console.log("Error: No id specified");
+    async bdpPostStats(token, servercount) {
+        if (!token && !servercount) throw new Error('bdpPostStats requires 2 argument');
         if (!token) return console.log("Error: No token specified");
         if (!servercount) return console.log("Error: No server count specified");
         const data = {};
@@ -64,7 +61,7 @@ class DTOOLS {
         } else {
             data.server_count = this.client.guilds.size;
         }
-        const response = await this.request('post', `https://bots.discord.pw/api/bots/${id}/stats`, data, token);
+        const response = await this.request('post', `https://bots.discord.pw/api/bots/${this.client.user.id}/stats`, data, token);
         return response.body;
     }
 }
