@@ -5,3 +5,7 @@
 **Getting Started**
 
 Simply Run `npm install dtools.js`
+
+**Docs**
+
+https://sheldon.guide/dtools.js

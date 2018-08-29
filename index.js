@@ -7,6 +7,9 @@ class DTOOLS {
         }
     }
     request(method, endpoint, data, auth) {
+        if (!method && !endpoint) throw new Error('dblPostStats requires at least 2 argument');
+        if (!method) throw new Error("No method specified");
+        if (!endpoint) throw new Error("No endpoint specified");
         const request = snekfetch[method](endpoint);
         if (method === 'post' && data) request.send(data);
         if (method === 'get' && data) request.query(data);
@@ -19,7 +22,7 @@ class DTOOLS {
         return console.log("Pong");
     }
     async getDays(date) {
-        if (!date) return console.log("Error: No date specified")
+        if (!date) throw new Error("No date specified")
         let now = new Date();
         let diff = now.getTime() - date.getTime();
         let days = Math.floor(diff / 86400000);
@@ -27,9 +30,9 @@ class DTOOLS {
     }
     async dblPostStats(id, token, servercount) {
         if (!id && !token && !servercount) throw new Error('dblPostStats requires 3 argument');
-        if (!id) return console.log("Error: No id specified");
-        if (!token) return console.log("Error: No token specified");
-        if (!servercount) return console.log("Error: No server count specified");
+        if (!id) throw new Error("No id specified");
+        if (!token) throw new Error("No token specified");
+        if (!servercount) throw new Error("No server count specified");
         const data = {};
         if (servercount) {
             data.server_count = servercount;
@@ -41,9 +44,9 @@ class DTOOLS {
     }
     async bfdPostStats(id, token, servercount) {
         if (!id && !token && !servercount) throw new Error('bfdPostStats requires 3 argument');
-        if (!id) return console.log("Error: No id specified");
-        if (!token) return console.log("Error: No token specified");
-        if (!servercount) return console.log("Error: No server count specified");
+        if (!id) throw new Error("No id specified");
+        if (!token) throw new Error("No token specified");
+        if (!servercount) throw new Error("No server count specified");
         const data = {};
         if (servercount) {
             data.count = servercount;
@@ -55,9 +58,9 @@ class DTOOLS {
     }
     async bdpPostStats(id, token, servercount) {
         if (!id && !token && !servercount) throw new Error('bdpPostStats requires 3 argument');
-        if (!id) return console.log("Error: No id specified");
-        if (!token) return console.log("Error: No token specified");
-        if (!servercount) return console.log("Error: No server count specified");
+        if (!id) throw new Error("No id specified");
+        if (!token) throw new Error("No token specified");
+        if (!servercount) throw new Error("No server count specified");
         const data = {};
         if (servercount) {
             data.server_count = servercount;
@@ -69,9 +72,9 @@ class DTOOLS {
     }
     async dbgPostStats(id, token, servercount) {
         if (!id && !token && !servercount) throw new Error('bdpPostStats requires 3 argument');
-        if (!id) return console.log("Error: No id specified");
-        if (!token) return console.log("Error: No token specified");
-        if (!servercount) return console.log("Error: No server count specified");
+        if (!id) throw new Error("No id specified");
+        if (!token) throw new Error("No token specified");
+        if (!servercount) throw new Error("No server count specified");
         const data = {};
         if (servercount) {
             data.count = servercount;
@@ -83,9 +86,9 @@ class DTOOLS {
     }
     async dbwPostStats(id, token, servercount) {
         if (!id && !token && !servercount) throw new Error('bdpPostStats requires 3 argument');
-        if (!id) return console.log("Error: No id specified");
-        if (!token) return console.log("Error: No token specified");
-        if (!servercount) return console.log("Error: No server count specified");
+        if (!id) throw new Error("No id specified");
+        if (!token) throw new Error("No token specified");
+        if (!servercount) throw new Error("No server count specified");
         const data = {};
         if (servercount) {
             data.guild_count = servercount;
@@ -97,9 +100,9 @@ class DTOOLS {
     }
     async blsPostStats(id, token, servercount) {
         if (!id && !token && !servercount) throw new Error('bdpPostStats requires 3 argument');
-        if (!id) return console.log("Error: No id specified");
-        if (!token) return console.log("Error: No token specified");
-        if (!servercount) return console.log("Error: No server count specified");
+        if (!id) throw new Error("No id specified");
+        if (!token) throw new Error("No token specified");
+        if (!servercount) throw new Error("No server count specified");
         const data = {};
         if (servercount) {
             data.server_count = servercount;
