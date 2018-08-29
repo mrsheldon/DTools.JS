@@ -1,0 +1,24 @@
+{
+  "name": "dtools.js",
+  "version": "1.0.4-dev",
+  "description": "Free of charge tools for Discord bots",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrSheldon/DTools.JS.git"
+  },
+  "keywords": [
+    "luki",
+    "lib",
+    "luki.js"
+  ],
+  "author": "MrSheldon <root@mrsheldon.me> (https://mrsheldon.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrSheldon/DTools.JS/issues"
+  },
+  "homepage": "https://github.com/MrSheldon/DTools.JS#readme",
+  "dependencies": {
+    "snekfetch": "^4.0.4"
+  }
+}
